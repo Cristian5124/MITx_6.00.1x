@@ -14,7 +14,7 @@ For example, if `s = 'azcbobobegghakl'`, your program should print: <br><br>
 
 <hr>
 
-[Problem1](Problem1.py)
+[Problem 1](Problem1.py)
 
     # -*- coding: utf-8 -*-
     """
@@ -45,7 +45,7 @@ For example, if `s = 'azcbobobegghakl'`, then your program should print: <br><br
 
 <hr>
 
-[Problem2](Problem2.py)
+[Problem 2](Problem2.py)
 
     # -*- coding: utf-8 -*-
     """
@@ -92,7 +92,7 @@ In the case of ties, print the first substring. For example, if `s = 'abcbcd'`, 
 
 <hr>
 
-[Problem3](Problem3.py)
+[Problem 3](Problem3.py)
 
     # -*- coding: utf-8 -*-
     """
