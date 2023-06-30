@@ -102,6 +102,8 @@ A summary of the required math is found below:
             cont+=1
         print('Remaining balance: '+str(round(balance,2)))
 
+<br>
+
 ### Problem 2 - Paying Debt Off in a Year
 
 <hr>
@@ -195,6 +197,8 @@ Assume that the interest is compounded monthly according to the balance at the e
             fixed_monthly_payment += 10
     
         print('Lowest Payment:', fixed_monthly_payment)
+
+<br>
 
 ### Problem 3 - Using Bisection Search to Make the Program Faster
 
