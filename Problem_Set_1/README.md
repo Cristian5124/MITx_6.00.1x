@@ -30,6 +30,8 @@ For example, if `s = 'azcbobobegghakl'`, your program should print: <br>
                 vowels+=1
         print('Number of vowels: '+str(vowels))
 
+<br>
+
 ### Problem 2
 
 <hr>
@@ -64,6 +66,8 @@ For example, if `s = 'azcbobobegghakl'`, then your program should print: <br>
                         bob+=1
             pos+=1
         print('Number of times bob occurs is: '+str(bob))
+
+<br>
 
 ### Problem 3
 
