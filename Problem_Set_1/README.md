@@ -6,7 +6,7 @@
 
 Assume `s` is a string of lower case characters. <br><br>
 Write a program that counts up the number of vowels contained in the string `s`. Valid vowels are: '`a`', '`e`', '`i`', '`o`', and '`u`'. <br>
-For example, if `s = 'azcbobobegghakl'`, your program should print: <br><br>
+For example, if `s = 'azcbobobegghakl'`, your program should print: <br>
 
     Number of vowels: 5
 
@@ -37,7 +37,7 @@ For example, if `s = 'azcbobobegghakl'`, your program should print: <br><br>
 Assume `s` is a string of lower case characters. <br>
 
 Write a program that prints the number of times the string `'bob'` occurs in `s`. <br>
-For example, if `s = 'azcbobobegghakl'`, then your program should print: <br><br>
+For example, if `s = 'azcbobobegghakl'`, then your program should print: <br>
 
     Number of times bob occurs is: 2
 
@@ -72,13 +72,13 @@ For example, if `s = 'azcbobobegghakl'`, then your program should print: <br><br
 Assume `s` is a string of lower case characters. <br>
 
 Write a program that prints the longest substring of `s` in which the letters occur in alphabetical order. <br>
-For example, if `s = 'azcbobobegghakl'`, then your program should print: <br><br>
+For example, if `s = 'azcbobobegghakl'`, then your program should print: <br>
 
     Longest substring in alphabetical order is: beggh
 
 <br>
 
-In the case of ties, print the first substring. For example, if `s = 'abcbcd'`, then your program should print: <br><br>
+In the case of ties, print the first substring. For example, if `s = 'abcbcd'`, then your program should print: <br>
 
     Longest substring in alphabetical order is: abc
     
