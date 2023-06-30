@@ -204,7 +204,7 @@ You'll notice that in Problem 2, your monthly payment had to be a multiple of $1
 
 <br>
 
-Well then, how can we calculate a more accurate fixed monthly payment than we did in Problem 2 without running into the problem of slow code? We can make this program run faster using a technique introduced in lecture - bisection search!
+Well then, how can we calculate a more accurate fixed monthly payment than we did in Problem 2 without running into the problem of slow code? We can make this program run faster using a technique introduced in lecture - *bisection search*!
 
 <br>
 
