@@ -9,7 +9,7 @@ Created on Tue Jun 27 14:21:43 2023
 
 import random
 
-WORDLIST_FILENAME = "Downloads\words.txt"
+WORDLIST_FILENAME = "Problem_Set_3\words.txt"
 
 def loadWords():
     """
