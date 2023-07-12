@@ -12,11 +12,11 @@ In this problem, I will implement a function, called hangman, that will start up
 
 <br>
 
-For this problem, you will need the code files [ps3_hangman.py](ps3_hangman.py) and [words.txt](words.txt). Click on each and download them. Be sure to save them in same directory. Open and run the file *ps3_hangman.py* without making any modifications to it, in order to ensure that everything is set up correctly. By "open and run" I mean do the following:
+For this problem, you will need the code files [Ps3.py](Ps3.py) and [words.txt](words.txt). Click on each and download them. Be sure to save them in same directory. Open and run the file *Ps3.py* without making any modifications to it, in order to ensure that everything is set up correctly. By "open and run" I mean do the following:
 
   * Go to your IDE. From the File menu, choose "Open".
-  * Find the file `ps3_hangman.py` and choose it.
-  * The template `ps3_hangman.py` file should now be open. Run the file.
+  * Find the file `Ps3.py` and choose it.
+  * The template `Ps3.py` file should now be open. Run the file.
 
 <br>
 
@@ -31,7 +31,7 @@ If you see an IOError instead (e.g., "No such file or directory"), you should ch
 
 <br>
 
-For example, if you saved `ps3_hangman.py` and `words.txt` in the directory "C:/Users/Kevin/" change the line:
+For example, if you saved `Ps3.py` and `words.txt` in the directory "C:/Users/Kevin/" change the line:
 
 WORDLIST_FILENAME = "words.txt"  to something like
   
@@ -330,7 +330,7 @@ There are four important pieces of information I stored in this function:
 
 <hr>
 
-[Problem 4](ps3_hangman.py)
+[Problem 4](Ps3.py)
 
     # -*- coding: utf-8 -*-
     """
