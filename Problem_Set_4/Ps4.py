@@ -5,7 +5,7 @@ import string
 
 VOWELS = 'aeiou'
 CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
-HAND_SIZE = 7
+HAND_SIZE = 7   #You can change this value in order to play different hand sizes.
 
 SCRABBLE_LETTER_VALUES = {'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1, 'j': 8,
                            'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1,
@@ -93,10 +93,11 @@ def displayHand(hand):
     Displays the letters currently in the hand.
 
     For example:
+
     >>> displayHand({'a':1, 'x':2, 'l':3, 'e':1})
     Should print out something like:
        a x x l l l e
-    The order of the letters is unimportant.
+    The order of the letters is unimportant here because later I made a function that sorts the hand alphabetically.
 
     hand: dictionary (string -> int)
     """
@@ -179,9 +180,6 @@ def sorthand(hand):
         hand: dictionary (string -> int)
         """
         
-        SCRABBLE_LETTER_VALUES = {'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1, 
-                                  'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1, 
-                                  's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10}
         sort_hand = {}
 
         for letter in SCRABBLE_LETTER_VALUES.keys():
@@ -380,14 +378,17 @@ def compPlayHand(hand, wordList, n):
 
         chance = False
         
+        # If the hand only has one letter left, ends the game
         if num_letters == 1: 
             print('No word of the word list is valid for this hand.')
             break
         
+        # If there are vowels left or the letter 'y', there is a chance to find a valid word
         for letter in hand.keys():
             if (letter in ('a','e','i','o','u','y') and hand[letter] != 0):
                 chance = True
 
+        # If there is no chance, ends the game
         if chance == False:
             print('No word of the word list is valid for this hand.')
             break
@@ -398,7 +399,7 @@ def compPlayHand(hand, wordList, n):
             # If the input is a single period:
             if word == None:
                 print('No word of the word list is valid for this hand.')
-                # End the game (break out of the loop)
+                # Ends the game (break out of the loop)
                 break
                 
             # Otherwise (the input is not a single period):
@@ -411,16 +412,16 @@ def compPlayHand(hand, wordList, n):
                     break
                 # Otherwise (the word is valid):
                 else:
-                    # Tell the user how many points the word earned, and the updated total score 
+                    # Tells the user how many points the word earned, and the updated total score 
                     word_score = getWordScore(word, n)
                     score += word_score
                     print('"'+str(word)+'"', 'earned', word_score, 'points. Total:', score, 'points')             
-                    # Update hand and show the updated hand to the user
+                    # Updates hand and shows the updated hand to the user
                     hand = updateHand(hand, word)
                     print()
         
         num_letters = calculateHandlen(hand)
-    # Game is over (user entered a '.' or ran out of letters), so tell user the total score
+    # Game is over (user entered a '.' or ran out of letters), so tells user the total score
     print('Total score:',score, 'points.')
 
 # -----------------------------------
