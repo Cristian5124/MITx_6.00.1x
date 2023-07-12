@@ -534,7 +534,6 @@ def playGame(wordList):
 
 # -----------------------------------
 
-def main():
+if __name__ == '__main__':
     wordList = loadWords()
     playGame(wordList)
-main()
