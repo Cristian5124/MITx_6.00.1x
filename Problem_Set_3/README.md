@@ -145,6 +145,8 @@ WORDLIST_FILENAME = "C:/Users/Kevin/words.txt"
         -----------
         Sorry, you ran out of guesses. The word was else.
 
+<br>
+
 ### Problem 1 - Is the Word Guessed
 
 <hr>
