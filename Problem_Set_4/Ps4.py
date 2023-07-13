@@ -477,6 +477,7 @@ def playGame(wordList):
                 print()
                 n = HAND_SIZE
                 hand = dealHand(n)
+                hand = sorthand(hand)
                 playHand(hand, wordList, n)
                 print()
                 game = input('Enter n to deal a new hand, r to replay the last hand, or e to end game: ')
@@ -489,6 +490,7 @@ def playGame(wordList):
                 print()
                 n = HAND_SIZE
                 hand = dealHand(n)
+                hand = sorthand(hand)
                 compPlayHand(hand, wordList, n)
                 print()
                 game = input('Enter n to deal a new hand, r to replay the last hand, or e to end game: ')
