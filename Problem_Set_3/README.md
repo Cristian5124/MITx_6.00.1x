@@ -332,7 +332,7 @@ There are four important pieces of information I stored in this function:
 
 <hr>
 
-[Problem 4](Ps3.py)
+[Hangman Game](Ps3.py)
 
     # -*- coding: utf-8 -*-
     """
