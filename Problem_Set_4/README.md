@@ -877,7 +877,7 @@ At this point, the computer can choose a word if you give it the option to play.
             print()
             print('Run out of letters. Total score:', score, 'points.')
     
-        elif word != '.':
+        elif word != '.' and num_letters != 0:
             print()
             print('Total score:',score, 'points.')
     
