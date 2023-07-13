@@ -322,7 +322,7 @@ def playHand(hand, wordList, n):
         print()
         print('Run out of letters. Total score:', score, 'points.')
 
-    elif word != '.':
+    elif word != '.' and num_letters != 0:
         print()
         print('Total score:',score, 'points.')
 
