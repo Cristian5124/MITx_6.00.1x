@@ -831,31 +831,55 @@ At this point, the computer can choose a word if you give it the option to play.
     
         while(num_letters > 0):
             print('Current Hand: ', end='')
-            displayHand(hand_copy)
-            word = input('Enter word, or a "." to indicate that you are finished: ')
+            displayHand(hand)
+    
+            chance = False
             
-            if word == '.':
-                print('Goodbye! Total score:', score, 'points.')
-                print()
+            # If the hand only has one letter left, ends the game
+            if num_letters == 1: 
+                print('No word of the word list is valid for this hand.')
                 break
-            else:
-                valid = isValidWord(word, hand, wordList)
-                if valid == False:
-                    print('Invalid word, please try again.')
-                    print()
-                else:
-                    word_score = getWordScore(word, n)
-                    score += word_score
-                    print('"'+str(word)+'"', 'earned', word_score, 'points. Total:', score, 'points')
-                    print()
-                    for letter in word:
-                        hand_copy[letter] -= 1
-        
-            num_letters = calculateHandlen(hand_copy)
             
-            if(num_letters == 0):
-                print('Run out of letters. Total score:', score, 'points.')
-                print()
+            # If there are vowels left or the letter 'y', there is a chance to find a valid word
+            for letter in hand.keys():
+                if (letter in ('a','e','i','o','u','y') and hand[letter] != 0):
+                    chance = True
+    
+            # If there is no chance, ends the game
+            if chance == False:
+                print('No word of the word list is valid for this hand.')
+                break
+            
+            else:
+                word = input('Enter word, or a "." to indicate that you are finished: ')
+                
+                if word == '.':
+                    print()
+                    print('Goodbye! Total score:', score, 'points.')
+                    break
+                else:
+                    valid = isValidWord(word, hand, wordList)
+                    if valid == False:
+                        print('Invalid word, please try again.')
+                        print()
+                    else:
+                        word_score = getWordScore(word, n)
+                        score += word_score
+                        print('"'+str(word)+'"', 'earned', word_score, 'points. Total:', score, 'points')
+                        print()
+                        for letter in word:
+                            hand_copy[letter] -= 1
+                        hand = updateHand(hand,word)
+                
+                num_letters = calculateHandlen(hand_copy)
+            
+        if(num_letters == 0):
+            print()
+            print('Run out of letters. Total score:', score, 'points.')
+    
+        elif word != '.':
+            print()
+            print('Total score:',score, 'points.')
     
     # -----------------------------------
     
@@ -977,6 +1001,7 @@ At this point, the computer can choose a word if you give it the option to play.
             
             num_letters = calculateHandlen(hand)
         # Game is over (user entered a '.' or ran out of letters), so tells user the total score
+        print()
         print('Total score:',score, 'points.')
     
     # -----------------------------------
@@ -1032,6 +1057,7 @@ At this point, the computer can choose a word if you give it the option to play.
                     print()
                     n = HAND_SIZE
                     hand = dealHand(n)
+                    hand = sorthand(hand)
                     playHand(hand, wordList, n)
                     print()
                     game = input('Enter n to deal a new hand, r to replay the last hand, or e to end game: ')
@@ -1044,6 +1070,7 @@ At this point, the computer can choose a word if you give it the option to play.
                     print()
                     n = HAND_SIZE
                     hand = dealHand(n)
+                    hand = sorthand(hand)
                     compPlayHand(hand, wordList, n)
                     print()
                     game = input('Enter n to deal a new hand, r to replay the last hand, or e to end game: ')
